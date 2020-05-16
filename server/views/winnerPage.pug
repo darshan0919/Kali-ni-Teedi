@@ -1,0 +1,12 @@
+extends layout
+
+append head
+  link(rel = 'stylesheet' href='/css/winners.css')
+
+block content
+  div.main
+    div.winners.blink_me WINNER
+    div.names
+
+append foot
+  script(src='js/winners.js')

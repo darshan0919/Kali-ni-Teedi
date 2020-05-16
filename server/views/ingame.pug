@@ -1,0 +1,82 @@
+extends layout.pug
+
+append head
+  link(rel = 'stylesheet' href='/css/cards.css')
+
+block content
+  div.main
+    div.box.box-1.d-flex.justify-content-center
+      div.left-panel
+        div.roomID
+        div.final-bid
+      div.mid-panel
+        div.player.p3 0
+      div.right-panel-3
+        div.hukum-area
+      div.right-panel-4
+        div.choose-message Choose Hukum
+        div.hukum-card
+          div.choose-suit
+            select.dropdown-addon.chosen-card-suit-2
+              option(value='C') Clubs
+              option(value='D') Diamonds
+              option(value='H') Hearts
+              option(value='S') Spades
+          div.submit-chosen-card
+            button.hukum-submit.dropdown-addon(type="button") Set
+      div.right-panel-2
+        div.choose-message Choose A Card
+        div.choose-card
+          div.choose-value
+            select.dropdown-addon.chosen-card-value
+              option(value='A') Ace
+              option(value='K') King
+              option(value='Q') Queen
+              option(value='J') Jack
+              option(value='0') 10
+              option(value='9') 9
+              option(value='8') 8
+              option(value='7') 7
+              option(value='6') 6
+              option(value='5') 5
+              option(value='4') 4
+              option(value='3') 3
+              option(value='2') 2
+          div.choose-suit
+            select.dropdown-addon.chosen-card-suit-1
+              option(value='C') Clubs
+              option(value='D') Diamonds
+              option(value='H') Hearts
+              option(value='S') Spades
+          div.submit-chosen-card
+            button.card-submit.dropdown-addon(type="button") Submit
+      div.right-panel-1 
+        div.bid-calc
+          div.bid-value
+            input.bid-input(type="number",value=100,step="5")
+          div.bid-button 
+            div.bid-row
+              button.bid-5(type="button") 5
+              button.bid-15(type="button") 15
+              button.bid-giveup(type="button") Give Up
+            div.bid-row
+              button.bid-10(type="button") -10
+              button.bid-30(type="button") 30
+              button.bid-submit(type="button") Bid
+    div.box.box-2.d-flex.justify-content-between
+      div.player.p2 0
+      div.box-table
+        - for (var card = 0; card <= 3 ; card++) 
+          div.card-table(id = 'cardPlace' + card)
+      div.player.p4 0
+    div.box.box-3.d-flex.justify-content-between
+      div.player.p1 0
+      div.box-deck 
+        - for (var card = 1; card <= 13 ; card++)  
+          div.card-deck
+            img.card-image(src= "images/deck/back.png", id = 'card' + card)
+      //div.player.p5 0
+append foot
+  script(src='/socket.io/socket.io.js')
+  script(src='js/form.js')
+  script(src='js/game.js')

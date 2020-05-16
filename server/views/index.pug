@@ -1,0 +1,22 @@
+extends layout.pug
+
+append head
+  link(rel = 'stylesheet' href='/css/main.css')
+
+block content
+  .join-container
+    header.join-header
+      h1  Kaali ni Teedi
+    main.join-main
+      form.join-form
+        input.form-control(type='text' id='name' name='name' placeholder='Enter nick name' required)
+        button.form-control.btn.btn-success(type='button',onclick="createRoom()") Create Room
+        button.form-control.btn.btn-success(type='button',onclick="joinRoom()") Join Room
+      form.join-room
+        input.form-control(type='text' id='room' name='room' placeholder='Enter Room Code here' required)
+        button.form-control.btn.btn-success(type='button',onclick="Join()") Join
+append foot
+  script(src='/socket.io/socket.io.js')
+  script(src='js/form.js')
+
+  

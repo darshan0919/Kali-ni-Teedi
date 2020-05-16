@@ -1,0 +1,320 @@
+.main{
+  background-image: url('../images/table/poker-1.jpg');
+  background-size: 100vw 100vh;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1%;
+}
+
+:root {
+	--dark-color-a: #030618;
+	--dark-color-b: #1a1f3b;
+	--light-color: #e6e9ff;
+	--success-color: #339933;
+	--error-color: #bb4a46;
+}
+
+.box{
+  object-fit: cover;
+  width:100%; 
+}
+.box-1{
+  height: 12%;
+}
+
+
+.left-panel,.mid-panel,.right-panel-1,.right-panel-2,.right-panel-3,.right-panel-4{
+  height: 100%;
+  justify-content: center;
+  align-content: flex-start;
+  display: flex;
+}
+
+
+.left-panel,.right-panel-1,.right-panel-2,.right-panel-3{
+  width: 40%;
+}
+
+.mid-panel{
+  width: 20%;
+}
+
+.right-panel-1,.right-panel-2, .right-panel-3,.right-panel-4{
+  display: none;
+}
+
+
+
+
+
+
+
+.box-2{
+  height: 65%;
+}
+.box-3{
+  height: 23%;
+}
+
+.left-panel{
+  align-content: space-around;
+  /*align-items: center;*/
+}
+
+.roomID{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vmin;
+  background-color: rgb(37, 5, 53);
+  border: rgb(179, 129, 184) 0.3rem solid;
+  color: #f1f0ee;
+  min-width: 25vw;
+  max-width: 35vw;
+  height: 60%;
+  border-radius: 5%;
+  margin-bottom: 100px;
+}
+
+.final-bid{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vmin;
+  background-color: rgb(238, 165, 70);
+  border: rgb(13, 43, 124) 0.3rem solid;
+  color: #1c0d52;
+  min-width: 10vw;
+  max-width: 15vw;
+  height: 80%;
+  border-radius: 5%;
+  margin-bottom: 100px;
+}
+
+
+.bid-calc{
+  display: none;
+  height: 100%;
+  width: 80%;
+  border-radius: 1.8vmin;
+  border: blue solid 1vmin;
+  display: flex;
+}
+
+
+
+.choose-card{
+  height: 80%;
+  width: 100%;
+  border-radius: 1.2vmin;
+  border: black solid 0.6vmin;
+  display: flex;
+  align-self:center;
+}
+.hukum-card{
+  height: 80%;
+  width: 100%;
+  border-radius: 1.2vmin;
+  border: black solid 0.6vmin;
+  display: flex;
+  align-self:center;
+}
+
+
+.choose-message{
+  height: 65%;
+  min-width: 50%;
+  border-top-left-radius: 1.2vmin;
+  border-bottom-left-radius: 1.2min;
+  box-shadow : 5px 10px #888888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vmin;
+  background-color: indigo;
+  color:whitesmoke;
+  align-self:center;
+  margin-right: 5%;
+}
+
+.bid-value{
+  background-color: rgb(37, 5, 53);
+  height: 100%;
+  min-width: 40%;
+}
+
+.choose-value,.choose-suit,.submit-chosen-card{
+  height: 100%;
+  min-width: 33.33%;
+  border: 0.3vmin solid rgb(27, 12, 82);
+}
+
+
+
+.bid-button{
+  height: 100%;
+  min-width: 60%;
+}
+
+.bid-row{
+  height: 50%;
+  width: 100%;
+}
+
+.bid-5,.bid-15,.bid-giveup,.bid-10,.bid-submit,.bid-30{
+  height: 100%;
+  width: 33.33%;
+  font-size: 3vmin;
+  background-color: var(--success-color);
+  color: var(--light-color);
+  border-radius: 0.8vmin;
+}
+.bid-submit{
+  background-color: var(--error-color);
+  color: var(--dark-color-b);
+}
+.bid-giveup{
+  background-color: rebeccapurple;
+  color: beige;
+}
+
+.bid-input{
+  height: 100%;
+  width: 100%;
+  font-size: 5vmin;
+  background-color: rgb(42, 9, 94);
+  color: aliceblue;
+  border-top-left-radius: 1.2vmin;
+  border-bottom-left-radius: 1.2vmin;
+}
+
+
+.dropdown-addon{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: 3vmin;
+  justify-content: center;
+  align-items:center;
+}
+.choose-value .dropdown-addon{
+  background-color: palevioletred;
+}
+.choose-suit .dropdown-addon{
+  background-color: green;
+}
+.card-submit,.hukum-submit{
+  background-color: red;
+  width: 100%;
+}
+
+
+
+.player{
+  width: 8%;
+  height: 100%;
+  border-radius: 20%;
+  padding: 2%;
+  font-size: 4vmin;
+  color: aliceblue;
+  background-color: rgb(8, 21, 39);
+  border: red 0.8vh solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p3{
+  width: 8vw;
+}
+
+
+
+.hukum-area{
+  border-radius: 10%;
+  background-image:  url('images/deck/C.png');
+  background-size: 100% 100%;
+  border: rgb(0, 8, 1) 0.3vh solid;
+  width: 8vw;
+  height: 100%;
+  border-radius: 10%;
+}
+
+
+.p2 , .p4{
+  max-height: 20%;
+  align-self: center;
+}
+.p1{
+  max-width: 8%;
+  max-height: 55%;
+  border-color: green;
+}
+
+
+.box-deck{
+  height: 100%;
+  width: 70%;
+  display:  flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card-deck{
+  top:0%;
+  bottom: 0%;
+  left:0%;
+  right:0%;
+  height: 100%;
+  width: 100%;
+  margin-left: -5rem;
+  object-fit: cover;
+  object-position: 100% 0%;
+}
+.card-deck:first-child{
+  margin-left: 0; 
+}
+.card-image{
+  object-fit: cover;
+  object-position: 100% 0%;
+  top:0%;
+  bottom: 0%;
+  left:0%;
+  right:0%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.box-table{
+  max-height: 100%;
+  width: 30%;
+  margin-top: 7%;
+  margin-bottom: 7%;
+  margin-left: 25%;
+  margin-right: 25%;
+  display:  flex;
+  justify-content: center;
+}
+.card-table{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 0%;
+  margin-left: -5rem;
+  align-self: center;
+}
+.card-table:first-child{
+  margin-left: 0; 
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
